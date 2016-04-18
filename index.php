@@ -242,7 +242,7 @@
                 <div class="col-lg-5 col-sm-6">
                     <h1>Submit your Resume</h1> <br>
                     
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form name="uploadResume" id="uploadResume" action ="submit.php" method = "post"  enctype = "multipart/form-data" novalidate>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -266,7 +266,7 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Submit</button>
+                                <input type="submit" name = "submit" value = "Submit" class="btn btn-xl" />
                             </div>
                         </div>
                     </form>
@@ -405,61 +405,39 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form name="sentMessage" id="contactForm" action = "email.php" method ="post" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name" id="name" required data-validation-required-message="Please enter your name.">
+                                    <input type="text" class="form-control" placeholder="Your Name" name = "name" id="name" required data-validation-required-message="Please enter your name.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <input type="email" class="form-control" placeholder="Your Email" name = "email" id="email" required data-validation-required-message="Please enter your email address.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Subject" id="subject" required data-validation-required-message="Please enter the subject.">
+                                    <input type="text" class="form-control" placeholder="Subject" name = "subject" id="subject" required data-validation-required-message="Please enter the subject.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="How may we help you?" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <textarea class="form-control" placeholder="How may we help you?" name = "message" id="message" required data-validation-required-message="Please enter a message."></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send</button>
+                                <input type="submit" value = "Send" name = "submit" class="btn btn-xl" />
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    </section>
-
-    <?php
-        //Sending email
-         $to = "xyz@somedomain.com";
-         $subject = "Review my Resume";
-         
-         $message .= "<h1>You have a new mail from Review my Resume</h1>";
-         //POST to get stuffs from the form.
-         
-         $header = "From:abc@somedomain.com \r\n";
-         $header .= "Cc:afgh@somedomain.com \r\n";
-         $header .= "MIME-Version: 1.0\r\n";
-         $header .= "Content-type: text/html\r\n";
-         
-         $retval = mail ($to,$subject,$message,$header);
-         
-         if( $retval == true ) {
-            echo "Message sent successfully...";
-         }else {
-            echo "Message could not be sent...";
-         }
-      ?>
+    </section>
       
     </div>
     <!-- /.banner -->
