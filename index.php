@@ -49,10 +49,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#services">About</a>
+                        <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#resume">Services</a>
+                        <a href="#services">Services</a>
                     </li>
                     <li>
                         <a href = "#team">The Team</a>
@@ -68,7 +68,7 @@
     </nav>
 
     <!-- Header -->
-    <a name="about"></a>
+    <a name="landing"></a>
     <div class="intro-header">
         <div class="container">
 
@@ -100,7 +100,7 @@
 
     <!-- Page Content -->
 
-	<a  name="services"></a>
+	<a  name="about"></a>
     <div class="content-section-a">
 
         <div class="container">
@@ -111,7 +111,7 @@
                     <h2 class="section-heading">We are here to provide exceptional career
                                                 services through a unique peer mentorship experience
                                                 to achieve your career goals.</h2>
-                    <p class="lead">Obtaining a college degree is an important achievement in a person’s life,
+                    <p class="lead">Obtaining a college degree is an important achievement in a person's life,
                                     which typically leads an individual into the workforce. Transitioning from a
                                     student to a full time professional could be a scary and nerve wracking process,
                                     and the job search process is a huge task to take on when you are just finishing
@@ -134,107 +134,9 @@
         <!-- /.container -->
 
     </div>
-    <!-- /.content-section-a -->
-    <a name = "team"></a>
-    <div class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-g-lg-offset-3 text-center">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Our Amazing Team</h2>
-                    <!--Team Section-->
-                    <div class="container">
-            
-                    <div class="row">
-                        <div class="col-lg-g-lg-offset-3 text-center">
-                            <img src="img/Marie.png" class="col-lg-g-lg-offset-3 text-center" alt="Marie Otake">
-                            <h4>Marie Otake</h4>
-                            <p class="text-muted">Resume Advisor</p>
-                            <ul class="list-inline social-buttons">
-                                <li><a href="https://www.linkedin.com/in/marie-otake-98b3a24a?trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                                <p class = "text-muted">Marie is a marketing professional in the process of obtaining her bachelor’s degree in
-                                                            marketing and entrepreneurship. She has over 10 years of customer service and 7 years of
-                                                            management experience. Marie has done hiring, and was a regional recruiter for a $7.2
-                                                            billion retail company. She has assisted many with improving their resumes and providing
-                                                            job search assistance. Marie enjoys training and sharing her knowledge and experiences
-                                                            with others, and look forward to seeing clients gain a better understanding of the job search process.</p>
-                            </ul>
-                        </div>
-                        <div class="col-lg-g-lg-offset-3 text-center">
-                            <img src="img/Christina.png" class="col-lg-g-lg-offset-3 text-center" alt="Christina Kim">
-                            <h4>Christina Kim</h4>
-                            <p class="text-muted">Resume Advisor</p>
-                            <ul class="list-inline social-buttons">
-                                <li><a href="https://www.linkedin.com/in/christina-kim-2a0b2294?authType=name&authToken=HvqK&trk=prof-connections-name"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                                <p class = "text-muted">Christina is an Operations and HR Specialist completing her bachelor’s degree in marketing
-                                                            and entrepreneurship at Green River College. Christina is a customer service enthusiast
-                                                            with an entrepreneur’s spirit. She has over seven years of work experience in the legal and
-                                                            medical industries with an emphasis on administration. Her qualifications include extensive
-                                                            knowledge in operations of professional services and human resource.  Christina enjoys meeting
-                                                            new people and is excited to help you achieve your career goals. She is dedicated to becoming
-                                                            a strong contributor to your long-term success.</p>
-                            </ul>
-                        </div>
-                        <div class="col-lg-g-lg-offset-3 text-center">
-                            <img src="img/Brent.png" class="col-lg-g-lg-offset-3 text-center" alt="Brent Gibson">
-                            <h4>Brent Gibson</h4>
-                            <p class="text-muted">Resume Advisor</p>
-                            <ul class="list-inline social-buttons">
-                                <li><a href="https://www.linkedin.com/in/brent-gibson-4530bb115?authType=NAME_SEARCH&authToken=dhFr&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A480991167%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1459311046984%2Ctas%3Abrent%20gi"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                                <p class = "text-muted">Brent is a student soon to graduate from Green River College with a bachelor’s degree in marketing
-                                                            and entrepreneurship. He is also a dedicated hobbyist of the literary arts. He has been studying
-                                                            grammar, diction, and brevity in written works for over 20 years. He has four years of experience
-                                                            in the United States Navy where he assisted in organizing the merge of the largest fixed-wing
-                                                            squadron in the world. He is dedicated to solving problems and excels under pressure when
-                                                            trying to meet a deadline.</p>
-                            </ul>
-                        </div>
-                        <div class="col-lg-g-lg-offset-3 text-center">
-                            <img src="img/Jesse.png" class="col-lg-g-lg-offset-3 text-center" alt="Jesse Sena">
-                            <h4>Jesse Sena</h4>
-                            <p class="text-muted">Communications</p>
-                            <ul class="list-inline social-buttons">
-                                <li><a href="https://www.linkedin.com/in/jesse-sena-766314114?authType=name&authToken=KKeV&trk=prof-sb-browse_map-name"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                                <p class = "text-muted">Jesse is a student in the process of obtaining his bachelors in marketing and entrepreneurship.
-                                                            He is experienced in marketing research, online marketing, and campaign analysis. In the past
-                                                            year Jesse has worked on marketing teams to create an integrated marketing campaign, developed
-                                                            and pitched a prototype for a multi-million-dollar toy company. He enjoys meeting new people and
-                                                            is a very enthusiastic person. In his spare time, he enjoys hiking, volunteering for youth sports
-                                                            foundations, and exercising. He has a very strong work ethic and can’t wait to help our clients
-                                                            achieve their goals.</p>
-                            </ul>
-                        </div>
-                        <div class="col-lg-g-lg-offset-3 text-center">
-                            <img src="img/Ryan.png" class="col-lg-g-lg-offset-3 text-center" alt="Ryan Lewis">
-                            <h4>Ryan Lewis</h4>
-                            <p class="text-muted">Communications</p>
-                            <ul class="list-inline social-buttons">
-                                <li><a href="https://www.linkedin.com/in/ryan-lewis-970441114?authType=name&authToken=72Ei&trk=prof-endrs-promo-multi-photo"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                                <p class = "text-muted">Ryan loves to learn and work hard at everything he does.He has gained experience in market research,
-                                                            business development, digital marketing, and integrated promotions. Ryan has worked to create integrated
-                                                            marketing campaigns for a local gourmet chocolate company; developed and pitched a prototype product for
-                                                            a $100 million toy company; and developed a digital marketing campaign for Green River College’s four-year
-                                                            programs. </p>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-b -->
+    <!-- /.content-section-a -->
     
-    <a  name="resume"></a>
+    <a name="services"></a>
     <div class="content-section-a">
 
         <div class="container">
@@ -368,7 +270,203 @@
         
             </div>
         </div>
-        <!-- /.container -->
+        <!-- /.container -->
+        
+        <a name = "team"></a>
+
+    <div class="content-section-b">
+
+
+
+        <div class="container">
+
+
+
+            <div class="row">
+
+                <div class="col-lg-g-lg-offset-3 text-center">
+
+                    <div class="clearfix"></div>
+
+                    <h2 class="section-heading">Our Amazing Team</h2>
+
+                    <!--Team Section-->
+
+                    <div class="container">
+
+            
+
+                    <div class="row">
+
+                        <div class="col-lg-g-lg-offset-3 text-center">
+
+                            <img src="img/Marie.png" class="col-lg-g-lg-offset-3 text-center" alt="Marie Otake">
+
+                            <h4>Marie Otake</h4>
+
+                            <p class="text-muted">Resume Advisor</p>
+
+                            <ul class="list-inline social-buttons">
+
+                                <li><a href="https://www.linkedin.com/in/marie-otake-98b3a24a?trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin"></i></a>
+
+                                </li>
+
+                                <p class = "text-muted">Marie is a marketing professional in the process of obtaining her bachelor's degree in
+
+                                                            marketing and entrepreneurship. She has over 10 years of customer service and 7 years of
+
+                                                            management experience. Marie has done hiring, and was a regional recruiter for a $7.2
+
+                                                            billion retail company. She has assisted many with improving their resumes and providing
+
+                                                            job search assistance. Marie enjoys training and sharing her knowledge and experiences
+
+                                                            with others, and look forward to seeing clients gain a better understanding of the job search process.</p>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="col-lg-g-lg-offset-3 text-center">
+
+                            <img src="img/Christina.png" class="col-lg-g-lg-offset-3 text-center" alt="Christina Kim">
+
+                            <h4>Christina Kim</h4>
+
+                            <p class="text-muted">Resume Advisor</p>
+
+                            <ul class="list-inline social-buttons">
+
+                                <li><a href="https://www.linkedin.com/in/christina-kim-2a0b2294?authType=name&authToken=HvqK&trk=prof-connections-name"><i class="fa fa-linkedin"></i></a>
+
+                                </li>
+
+                                <p class = "text-muted">Christina is an Operations and HR Specialist completing her bachelor's degree in marketing
+
+                                                            and entrepreneurship at Green River College. Christina is a customer service enthusiast
+
+                                                            with an entrepreneur's spirit. She has over seven years of work experience in the legal and
+
+                                                            medical industries with an emphasis on administration. Her qualifications include extensive
+
+                                                            knowledge in operations of professional services and human resource.  Christina enjoys meeting
+
+                                                            new people and is excited to help you achieve your career goals. She is dedicated to becoming
+
+                                                            a strong contributor to your long-term success.</p>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="col-lg-g-lg-offset-3 text-center">
+
+                            <img src="img/Brent.png" class="col-lg-g-lg-offset-3 text-center" alt="Brent Gibson">
+
+                            <h4>Brent Gibson</h4>
+
+                            <p class="text-muted">Resume Advisor</p>
+
+                            <ul class="list-inline social-buttons">
+
+                                <li><a href="https://www.linkedin.com/in/brent-gibson-4530bb115?authType=NAME_SEARCH&authToken=dhFr&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A480991167%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1459311046984%2Ctas%3Abrent%20gi"><i class="fa fa-linkedin"></i></a>
+
+                                </li>
+
+                                <p class = "text-muted">Brent is a student soon to graduate from Green River College with a bachelor's degree in marketing
+
+                                                            and entrepreneurship. He is also a dedicated hobbyist of the literary arts. He has been studying
+
+                                                            grammar, diction, and brevity in written works for over 20 years. He has four years of experience
+
+                                                            in the United States Navy where he assisted in organizing the merge of the largest fixed-wing
+
+                                                            squadron in the world. He is dedicated to solving problems and excels under pressure when
+
+                                                            trying to meet a deadline.</p>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="col-lg-g-lg-offset-3 text-center">
+
+                            <img src="img/Jesse.png" class="col-lg-g-lg-offset-3 text-center" alt="Jesse Sena">
+
+                            <h4>Jesse Sena</h4>
+
+                            <p class="text-muted">Communications</p>
+
+                            <ul class="list-inline social-buttons">
+
+                                <li><a href="https://www.linkedin.com/in/jesse-sena-766314114?authType=name&authToken=KKeV&trk=prof-sb-browse_map-name"><i class="fa fa-linkedin"></i></a>
+
+                                </li>
+
+                                <p class = "text-muted">Jesse is a student in the process of obtaining his bachelors in marketing and entrepreneurship.
+
+                                                            He is experienced in marketing research, online marketing, and campaign analysis. In the past
+
+                                                            year Jesse has worked on marketing teams to create an integrated marketing campaign, developed
+
+                                                            and pitched a prototype for a multi-million-dollar toy company. He enjoys meeting new people and
+
+                                                            is a very enthusiastic person. In his spare time, he enjoys hiking, volunteering for youth sports
+
+                                                            foundations, and exercising. He has a very strong work ethic and can't wait to help our clients
+
+                                                            achieve their goals.</p>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="col-lg-g-lg-offset-3 text-center">
+
+                            <img src="img/Ryan.png" class="col-lg-g-lg-offset-3 text-center" alt="Ryan Lewis">
+
+                            <h4>Ryan Lewis</h4>
+
+                            <p class="text-muted">Communications</p>
+
+                            <ul class="list-inline social-buttons">
+
+                                <li><a href="https://www.linkedin.com/in/ryan-lewis-970441114?authType=name&authToken=72Ei&trk=prof-endrs-promo-multi-photo"><i class="fa fa-linkedin"></i></a>
+
+                                </li>
+
+                                <p class = "text-muted">Ryan loves to learn and work hard at everything he does.He has gained experience in market research,
+
+                                                            business development, digital marketing, and integrated promotions. Ryan has worked to create integrated
+
+                                                            marketing campaigns for a local gourmet chocolate company; developed and pitched a prototype product for
+
+                                                            a $100 million toy company; and developed a digital marketing campaign for Green River College's four-year
+
+                                                            programs. </p>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <!-- /.container -->
+
+
+
+    </div>
+
+    <!-- /.content-section-b -->
 
 	<a  name="contact"></a>
     <div class="banner">
@@ -430,7 +528,7 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <input type="submit" value = "Send" name = "submit" class="btn btn-xl" />
+                                <input type="submit" value = "Send" name = "submit" class="btn btn-xl btn-success" />
                             </div>
                         </div>
                     </form>
@@ -472,10 +570,7 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
 </html>

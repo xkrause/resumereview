@@ -2,7 +2,7 @@
 
         //Sending email
 
-         $to = "chau.duong1995@yahoo.com";
+         $to = "sk8rak@gmail.com";
          $subject = $_POST['subject'];
 
          $message = "<h1>You have a new mail from Review my Resume</h1>";
@@ -17,6 +17,7 @@
          $email= mail ($to,$subject,$message,$header);
 
          if( $email== true ) {
+            header("Location: http://reviewmyresume.greenrivertech.net/index.php#contact");
             echo "Message sent successfully...";
          }else {
             echo "Message could not be sent...";
