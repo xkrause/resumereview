@@ -168,7 +168,7 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <input type="submit" name = "submit" value = "Submit" class="btn btn-xl" />
+                                <input type="submit" name = "submit" value = "Submit" class="btn btn-xl btn-success" />
                             </div>
                         </div>
                     </form>
@@ -478,14 +478,21 @@
                     <h2>Contact Us: </h2>
                 </div>
                 <div class="col-lg-6">
-                    <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><span class="network-name">Facebook</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><span class="network-name">Twitter</span></a>
-                        </li>
-                    </ul>
+                    <ul class="list-inline banner-social-buttons">
+
+                            <li>
+
+                                <a href="https://twitter.com/SBootstrap" class="btn btn-success btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#" class="btn btn-success btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+
+                            </li>
+
+                        </ul>
                 </div>
             </div>
 
