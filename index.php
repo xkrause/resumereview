@@ -77,15 +77,15 @@
                     <div class="intro-message">
                         <h1>Your resume is an employer's first impression.</h1>
                         <h3>Let us help you stand out, and let your skills speak for itself.</h3>
-                        <a href = "#resume" class = "btn btn-primary btn-lg">Submit Your Resume</a>
+                        <a href = "#services" class = "btn btn-primary btn-lg">Submit Your Resume</a>
                         <hr class="intro-divider">
                         
                         <ul class="list-inline intro-social-buttons">
                             <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-success btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                                <a href="https://twitter.com/reviewmyresume" class="btn btn-success btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-success btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                                <a href = "https://www.facebook.com/reviewmyresumeWA" class = "btn btn-success btn-lg"><i class = "fa fa-facebook"></i> Facebook</a>
                             </li>
                         </ul>
                     </div>
@@ -137,13 +137,12 @@
     <!-- /.content-section-a -->
     
     <a name="services"></a>
-    <div class="content-section-a">
+    <div class="content-section-b">
 
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
                     <h1>Submit your Resume</h1> <br>
-                    
                     <form name="uploadResume" id="uploadResume" action ="submit.php" method = "post"  enctype = "multipart/form-data" novalidate>
                         <div class="row">
                             <div class="col-md-12">
@@ -274,7 +273,7 @@
         
         <a name = "team"></a>
 
-    <div class="content-section-b">
+    <div class="content-section-a">
 
 
 
@@ -284,7 +283,7 @@
 
             <div class="row">
 
-                <div class="col-lg-g-lg-offset-3 text-center">
+                <div class="col-lg-g-lg-offset-3 pull-left">
 
                     <div class="clearfix"></div>
 
@@ -298,7 +297,7 @@
 
                     <div class="row">
 
-                        <div class="col-lg-g-lg-offset-3 text-center">
+                        <div class="col-lg-g-lg-offset-3 pull-left">
 
                             <img src="img/Marie.png" class="col-lg-g-lg-offset-3 text-center" alt="Marie Otake">
 
@@ -312,7 +311,7 @@
 
                                 </li>
 
-                                <p class = "text-muted">Marie is a marketing professional in the process of obtaining her bachelor's degree in
+                                <h4 class = "text-muted span-8">Marie is a marketing professional in the process of obtaining her bachelor's degree in
 
                                                             marketing and entrepreneurship. She has over 10 years of customer service and 7 years of
 
@@ -322,13 +321,13 @@
 
                                                             job search assistance. Marie enjoys training and sharing her knowledge and experiences
 
-                                                            with others, and look forward to seeing clients gain a better understanding of the job search process.</p>
+                                                            with others, and look forward to seeing clients gain a better understanding of the job search process.</h4>
 
                             </ul>
 
                         </div>
 
-                        <div class="col-lg-g-lg-offset-3 text-center">
+                        <div class="col-lg-g-lg-offset-3 pull-left">
 
                             <img src="img/Christina.png" class="col-lg-g-lg-offset-3 text-center" alt="Christina Kim">
 
@@ -342,7 +341,7 @@
 
                                 </li>
 
-                                <p class = "text-muted">Christina is an Operations and HR Specialist completing her bachelor's degree in marketing
+                                <h4 class = "text-muted span-8">Christina is an Operations and HR Specialist completing her bachelor's degree in marketing
 
                                                             and entrepreneurship at Green River College. Christina is a customer service enthusiast
 
@@ -354,13 +353,13 @@
 
                                                             new people and is excited to help you achieve your career goals. She is dedicated to becoming
 
-                                                            a strong contributor to your long-term success.</p>
+                                                            a strong contributor to your long-term success.</h4>
 
                             </ul>
 
                         </div>
 
-                        <div class="col-lg-g-lg-offset-3 text-center">
+                        <div class="col-lg-g-lg-offset-3 pull-left">
 
                             <img src="img/Brent.png" class="col-lg-g-lg-offset-3 text-center" alt="Brent Gibson">
 
@@ -374,7 +373,7 @@
 
                                 </li>
 
-                                <p class = "text-muted">Brent is a student soon to graduate from Green River College with a bachelor's degree in marketing
+                                <h4 class = "text-muted span-8">Brent is a student soon to graduate from Green River College with a bachelor's degree in marketing
 
                                                             and entrepreneurship. He is also a dedicated hobbyist of the literary arts. He has been studying
 
@@ -384,13 +383,13 @@
 
                                                             squadron in the world. He is dedicated to solving problems and excels under pressure when
 
-                                                            trying to meet a deadline.</p>
+                                                            trying to meet a deadline.</h4>
 
                             </ul>
 
                         </div>
 
-                        <div class="col-lg-g-lg-offset-3 text-center">
+                        <div class="col-lg-g-lg-offset-3 pull-left">
 
                             <img src="img/Jesse.png" class="col-lg-g-lg-offset-3 text-center" alt="Jesse Sena">
 
@@ -404,7 +403,7 @@
 
                                 </li>
 
-                                <p class = "text-muted">Jesse is a student in the process of obtaining his bachelors in marketing and entrepreneurship.
+                                <h4 class = "text-muted span-8">Jesse is a student in the process of obtaining his bachelors in marketing and entrepreneurship.
 
                                                             He is experienced in marketing research, online marketing, and campaign analysis. In the past
 
@@ -416,13 +415,13 @@
 
                                                             foundations, and exercising. He has a very strong work ethic and can't wait to help our clients
 
-                                                            achieve their goals.</p>
+                                                            achieve their goals.</h4>
 
                             </ul>
 
                         </div>
 
-                        <div class="col-lg-g-lg-offset-3 text-center">
+                        <div class="col-lg-g-lg-offset-3 pull-left">
 
                             <img src="img/Ryan.png" class="col-lg-g-lg-offset-3 text-center" alt="Ryan Lewis">
 
@@ -436,7 +435,7 @@
 
                                 </li>
 
-                                <p class = "text-muted">Ryan loves to learn and work hard at everything he does.He has gained experience in market research,
+                                <h4 class = "text-muted span-8">Ryan loves to learn and work hard at everything he does. He has gained experience in market research,
 
                                                             business development, digital marketing, and integrated promotions. Ryan has worked to create integrated
 
@@ -444,7 +443,7 @@
 
                                                             a $100 million toy company; and developed a digital marketing campaign for Green River College's four-year
 
-                                                            programs. </p>
+                                                            programs. </h4>
 
                             </ul>
 
@@ -482,13 +481,13 @@
 
                             <li>
 
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-success btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                                <a href="https://twitter.com/reviewmyresume" class="btn btn-success btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
 
                             </li>
 
                             <li>
 
-                                <a href="#" class="btn btn-success btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                                <a href = "https://www.facebook.com/reviewmyresumeWA" class = "btn btn-success btn-lg"><i class = "fa fa-facebook"></i> Facebook</a>
 
                             </li>
 
