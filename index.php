@@ -311,7 +311,7 @@
 
                                 </li>
 
-                                <h4 class = "text-muted span-8">Marie is a marketing professional in the process of obtaining her bachelor's degree in
+                                <h4 class = "text-muted span-2">Marie is a marketing professional in the process of obtaining her bachelor's degree in
 
                                                             marketing and entrepreneurship. She has over 10 years of customer service and 7 years of
 
