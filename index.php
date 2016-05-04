@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -167,7 +167,9 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <input type="submit" name = "submit" value = "Submit" class="btn btn-xl btn-success" />
+                                <input type="submit" name = "submit" value = "Submit" class="btn btn-xl btn-success" onclick = "resumeConfirmation()" />
+                                
+
                             </div>
                         </div>
                     </form>
@@ -273,21 +275,24 @@
         
         <a name = "team"></a>
 
-    <div class="content-section-a">
+        <div class="content-section-a">
 
 
 
-        <div class="container">
+            <div class="container">
 
 
 
             <div class="row">
+                <center><h2 class="section-heading"> Our Amazing Team</h2></center>
 
-                <div class="col-lg-g-lg-offset-3 pull-left">
+                <hr class="section-heading-spacer">
+                
+                <div class="col-lg-2-offset-1 pull-left">
 
                     <div class="clearfix"></div>
 
-                    <h2 class="section-heading">Our Amazing Team</h2>
+                    
 
                     <!--Team Section-->
 
@@ -295,11 +300,11 @@
 
             
 
-                    <div class="row">
+                    <!--<div class="row">-->
 
-                        <div class="col-lg-g-lg-offset-3 pull-left">
+                        <div class="col-lg-1-offset-3 pull-left">
 
-                            <img src="img/Marie.png" class="col-lg-g-lg-offset-3 text-center" alt="Marie Otake">
+                            <img src="img/Marie.png" class="col-sm-1-offset-3 text-center" alt="Marie Otake">
 
                             <h4>Marie Otake</h4>
 
@@ -311,7 +316,7 @@
 
                                 </li>
 
-                                <h4 class = "text-muted span-2">Marie is a marketing professional in the process of obtaining her bachelor's degree in
+                                <h4 class = "text-muted col-lg-1-offset-1">Marie is a marketing professional in the process of obtaining her bachelor's degree in
 
                                                             marketing and entrepreneurship. She has over 10 years of customer service and 7 years of
 
@@ -457,7 +462,7 @@
 
 
 
-        </div>
+        <!--</div>-->
 
         <!-- /.container -->
 
@@ -534,7 +539,7 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <input type="submit" value = "Send" name = "submit" class="btn btn-xl btn-success" />
+                                <input type="submit" value = "Send" name = "submit" class="btn btn-xl btn-success" onclick = "emailConfirmation()"/>
                             </div>
                         </div>
                     </form>
@@ -578,5 +583,17 @@
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    
+    <script>
+        
+        function resumeConfirmation() {
+            confirm("Are you sure you want to submit your resume?");
+        }
+        
+        function emailConfirmation() {
+            confirm("Are you sure you want to send this email?")
+        }
+    </script>
+    
 </body>
 </html>
