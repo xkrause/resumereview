@@ -3,7 +3,7 @@
     require 'PHPMailer/PHPMailerAutoload.php';
 
     $target_dir = "uploads/";
-    $file_name = basename($_FILES["fileToUpload"]["name"]). " " . $_POST['uploaderName'] . " " . date("l jS \of F Y h:i:s A");
+    $file_name = basename($_FILES["fileToUpload"]["name"]). " " . $_POST['uploaderName'] . " " . date("l jS \of F Y h:i:s A"."pdf") . ".pdf";
     $target_file = $target_dir . $file_name;
     
     $uploadOk = 1;
