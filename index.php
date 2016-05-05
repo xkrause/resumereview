@@ -224,48 +224,46 @@
                     <div class="clearfix"></div>
                     <h1>Our Service Packages: </h1>
                     <h2 class="section-heading">
-                        Bronze
+                        15 Minute Mentor Session
                     </h2>
                     <p class="lead">
                         <ul>
-                            <li><p class="lead">Resume Review and Revision</p></li>
+                            <li><p class="lead">$10.00</p></li>
                         </ul>
-                    </p>
-                    
-                     <h2 class="section-heading">
-                        Gold
-                    </h2>
-                    <p class="lead">
-                        <ul>
-                        <li><p class="lead">Resume Review and Revision</p></li>
-                        <li><p class="lead">15 minute mentor session.</p></li>
-                        </ul>
-                    </p>
-                    
-                     <h2 class="section-heading">
-                        Platinum
-                    </h2>
-                    <p class="lead">
-                        <ul>
-                        <li><p class="lead">Resume Review and Revision</p></li>
-                        <li><p class="lead">30 minute mentor session.</p></li>
-                        <li><p class="lead">Job recommendations.</p></li>
-                        </ul>
-                    </p>
-                    
-                    <h2 class="section-heading">
-                        $15 Introductory Offer
-                    </h2>
-                    <p class="lead">
-                        For a limited time, you get: 
-                        <ul>
-                        <li><p class="lead">Resume Review and Revision</p></li>
-                        </ul>
-                    </p>
-                    
+                    </p>
+                    
+                    <h2 class="section-heading">
+
+                        Job Suggestion
+
+                    </h2>
+
+                    <p class="lead">
+
+                        <ul>
+
+                            <li><p class="lead">$7.00</p></li>
+
+                        </ul>
+
+                    </p>
+                    
+                    <h2 class="section-heading">
+
+                        Resume Revision $15 Promo
+
+                    </h2>
+
+                    <p class="lead">
+
+                        <ul>
+
+                            <li><p class="lead">$15.00</p></li>
+
+                        </ul>
+
+                    </p>
                 </div>
-    
-                
                 </div>
             </div>
         
@@ -567,6 +565,12 @@
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
                             <a href="#services">Services</a>
+                        </li>
+                        
+                        <li class = "footer-menu-divider">&sdot;</li>
+                        
+                        <li>
+                            <a href = "#team">The Team</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
