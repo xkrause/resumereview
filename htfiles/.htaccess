@@ -1,0 +1,6 @@
+AuthUserFile /home/.htpasswds/.htpasswd
+AuthName "Please Log in"
+AuthType Basic
+
+require valid-user
+
