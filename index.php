@@ -159,7 +159,7 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <p class="lead">Please upload your Resume as a PDF file:</p>
+                                    <p class="lead">Please upload your Resume as a PDF, RTF, Text or Word Document:</p>
                                     <input type="file" name="fileToUpload" id="fileToUpload">
                                 </div>
                             </div>
