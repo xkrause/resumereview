@@ -4,11 +4,17 @@
     
     //Set the local timezone
     date_default_timezone_set("America/Los_Angeles");
-    
+
     $target_dir = "uploads/";
     $file = basename($_FILES["fileToUpload"]["name"]);
     $ext = pathinfo ($file, PATHINFO_EXTENSION);
     $uploadOk = 1;
+    
+     //Check for empty fields
+    if ( (empty($_POST['uploaderName']) == true) || (empty($_POST['uploaderPhone']) == true) || (empty($_POST['uploaderEmail']) == true) ) {
+         echo "Please fill in your name, email, phone number and attach your resume. ";
+        $uploadOk = 0;
+    }
     
     //Check file type
     $allowed =  array('pdf','rtf' ,'doc', 'docx', 'txt');

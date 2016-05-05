@@ -143,7 +143,7 @@
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
                     <h1>Submit your Resume</h1> <br>
-                    <form name="uploadResume" id="uploadResume" action ="submit.php" method = "post"  enctype = "multipart/form-data" novalidate>
+                    <form name="uploadResume" id="uploadResume" action ="submit.php" method = "post"  enctype = "multipart/form-data">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
