@@ -3,11 +3,12 @@
     require 'PHPMailer/PHPMailerAutoload.php';
 
     $target_dir = "uploads/";
-    $file_name = basename($_FILES["fileToUpload"]["name"]). " " . $_POST['uploaderName'] . " " . date("l jS \of F Y h:i:s A"."pdf") . ".pdf";
-    $target_file = $target_dir . $file_name;
+    $ext = pathinfo (basename($_FILES["fileToUpload"]["name"]), PATHINFO_EXTENSION);
+    $file_name = basename($_FILES["fileToUpload"]["name"]). " " . $_POST['uploaderName'] . " " . date("l jS \of F Y h:i:s A"."pdf") . "." . $ext;
     
+    $target_file = $target_dir . $file_name;
     $uploadOk = 1;
-    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
 
     // Check if file already exists. Almost would neve happen
     if (file_exists($target_file)) {
