@@ -36,7 +36,7 @@
                 $email->FromName  = 'ReviewMyResume';
                 $email->Subject   = 'Your attached file';
                 $email->Body      = 'This is the resume';
-                $email->AddAddress( 'chau.duong1995@yahoo.com' );
+                $email->AddAddress( 'sk8rak@gmail.com' );
                 
                 $email->AddAttachment( $target_file , $file_name );
                 
