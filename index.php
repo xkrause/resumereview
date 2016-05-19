@@ -97,7 +97,244 @@
 
     </div>
     <!-- /.intro-header -->
-
+<a name="services"></a>
+
+    <div class="content-section-b">
+
+
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-5 col-sm-6">
+
+                    <h1>Submit your Resume</h1> <br>
+
+                    <form name="uploadResume" id="uploadResume" action ="submit.php" method = "post"  enctype = "multipart/form-data">
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" placeholder="Your Name" id="name" name = "uploaderName" required data-validation-required-message="Please enter your name.">
+
+                                    <p class="help-block text-danger"></p>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <input type="email" class="form-control" placeholder="Your Email" id="email" name = "uploaderEmail"  required data-validation-required-message="Please enter your email address.">
+
+                                    <p class="help-block text-danger"></p>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <input type="tel" class="form-control" placeholder="Phone Number" id="phone"  name = "uploaderPhone" required data-validation-required-message="Please enter your phone number.">
+
+                                    <p class="help-block text-danger"></p>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <p class="lead">Please upload your Resume as a PDF, RTF, Text or Word Document:</p>
+
+                                    <input type="file" name="fileToUpload" id="fileToUpload">
+
+                                </div>
+                                
+                                <p><img src="/captcha.php" width="120" height="30" border="1" alt="CAPTCHA"> <input type="text" size="6" maxlength="5" name="captcha" value=""></p>
+                                
+                                 <p><small>copy the digits from the image into this box</small></p>
+
+                            </div>
+
+                       
+
+                            <div class="clearfix"></div>
+
+                            <div class="col-lg-12 text-center">
+
+                                <div id="success"></div>
+
+                                <input type="submit" name = "submit" value = "Submit" class="btn btn-xl btn-success" onclick = "resumeConfirmation()" />
+
+                                
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                
+
+            <?php
+
+            define("UPLOAD_DIR", "/uploads/");
+
+            
+
+            if (!empty($_FILES["myFile"])) {
+
+                $myFile = $_FILES["myFile"];
+
+            
+
+                if ($myFile["error"] !== UPLOAD_ERR_OK) {
+
+                    echo "<p>An error occurred.</p>";
+
+                    exit;
+
+                }
+
+            
+
+                // ensure a safe filename
+
+                $name = preg_replace("/[^A-Z0-9._-]/i", "_", $myFile["name"]);
+
+            
+
+                // don't overwrite an existing file
+
+                $i = 0;
+
+                $parts = pathinfo($name);
+
+                while (file_exists(UPLOAD_DIR . $name)) {
+
+                    $i++;
+
+                    $name = $parts["filename"] . "-" . $i . "." . $parts["extension"];
+
+                }
+
+            
+
+                // preserve file from temporary directory
+
+                $success = move_uploaded_file($myFile["tmp_name"],
+
+                    UPLOAD_DIR . $name);
+
+                /*
+
+                if (!$success) { 
+
+                    echo "<p>Unable to save file.</p>";
+
+                    exit;
+
+                }
+
+            
+
+                // set proper permissions on the new file
+
+                chmod(UPLOAD_DIR . $name, 0644);
+
+                */
+
+            }
+
+            
+
+            // verify the file type is correct
+
+            /*
+
+            $mime = "application/pdf; charset=binary";
+
+            exec("file -bi " . $_FILES["myFile"]["tmp_name"], $out);
+
+            if ($out[0] != $mime) {
+
+                echo "Please upload a PDF file.";
+
+            }*/
+
+            ?>
+
+            
+
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+
+                    <div class="clearfix"></div>
+
+                    <h1>Our Service Packages: </h1>
+
+                    <h2 class="section-heading">
+
+                        15 Minute Mentor Session
+
+                    </h2>
+
+                    <p class="lead">
+
+                        <ul>
+
+                            <li><p class="lead">$10.00</p></li>
+
+                        </ul>
+
+                    </p>
+                    
+                    <h2 class="section-heading">
+
+                        Job Suggestion
+
+                    </h2>
+
+                    <p class="lead">
+
+                        <ul>
+
+                            <li><p class="lead">$7.00</p></li>
+
+                        </ul>
+
+                    </p>
+                    
+                    <h2 class="section-heading">
+
+                        Resume Revision $15 Promo
+
+                    </h2>
+
+                    <p class="lead">
+
+                        <ul>
+
+                            <li><p class="lead">$15.00</p></li>
+
+                        </ul>
+
+                    </p>
+
+
+                </div>
+
+                </div>
+
+            </div>
+
+        
+
+            </div>
+
+        </div>
+
+        <!-- /.container -->
     <!-- Page Content -->
 
 	<a  name="about"></a>
@@ -135,149 +372,10 @@
 
     </div>
     <!-- /.content-section-a -->
-    
-    <a name="services"></a>
-    <div class="content-section-b">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <h1>Submit your Resume</h1> <br>
-                    <form name="uploadResume" id="uploadResume" action ="submit.php" method = "post"  enctype = "multipart/form-data">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name" id="name" name = "uploaderName" required data-validation-required-message="Please enter your name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email" id="email" name = "uploaderEmail"  required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Phone Number" id="phone"  name = "uploaderPhone" required data-validation-required-message="Please enter your phone number.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <p class="lead">Please upload your Resume as a PDF, RTF, Text or Word Document:</p>
-                                    <input type="file" name="fileToUpload" id="fileToUpload">
-                                </div>
-                                
-                                <p><img src="/captcha.php" width="120" height="30" border="1" alt="CAPTCHA"> <input type="text" size="6" maxlength="5" name="captcha" value=""></p>
-                                
-                                 <p><small>copy the digits from the image into this box</small></p>
-                            </div>
-                       
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                                <div id="success"></div>
-                                <input type="submit" name = "submit" value = "Submit" class="btn btn-xl btn-success" onclick = "resumeConfirmation()" />
-                                
-
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                
-            <?php
-            define("UPLOAD_DIR", "/uploads/");
-            
-            if (!empty($_FILES["myFile"])) {
-                $myFile = $_FILES["myFile"];
-            
-                if ($myFile["error"] !== UPLOAD_ERR_OK) {
-                    echo "<p>An error occurred.</p>";
-                    exit;
-                }
-            
-                // ensure a safe filename
-                $name = preg_replace("/[^A-Z0-9._-]/i", "_", $myFile["name"]);
-            
-                // don't overwrite an existing file
-                $i = 0;
-                $parts = pathinfo($name);
-                while (file_exists(UPLOAD_DIR . $name)) {
-                    $i++;
-                    $name = $parts["filename"] . "-" . $i . "." . $parts["extension"];
-                }
-            
-                // preserve file from temporary directory
-                $success = move_uploaded_file($myFile["tmp_name"],
-                    UPLOAD_DIR . $name);
-                /*
-                if (!$success) { 
-                    echo "<p>Unable to save file.</p>";
-                    exit;
-                }
-            
-                // set proper permissions on the new file
-                chmod(UPLOAD_DIR . $name, 0644);
-                */
-            }
-            
-            // verify the file type is correct
-            /*
-            $mime = "application/pdf; charset=binary";
-            exec("file -bi " . $_FILES["myFile"]["tmp_name"], $out);
-            if ($out[0] != $mime) {
-                echo "Please upload a PDF file.";
-            }*/
-            ?>
-            
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <div class="clearfix"></div>
-                    <h1>Our Service Packages: </h1>
-                    <h2 class="section-heading">
-                        15 Minute Mentor Session
-                    </h2>
-                    <p class="lead">
-                        <ul>
-                            <li><p class="lead">$10.00</p></li>
-                        </ul>
-                    </p>
-                    
-                    <h2 class="section-heading">
-
-                        Job Suggestion
-
-                    </h2>
-
-                    <p class="lead">
-
-                        <ul>
-
-                            <li><p class="lead">$7.00</p></li>
-
-                        </ul>
-
-                    </p>
-                    
-                    <h2 class="section-heading">
-
-                        Resume Revision $15 Promo
-
-                    </h2>
-
-                    <p class="lead">
-
-                        <ul>
-
-                            <li><p class="lead">$15.00</p></li>
-
-                        </ul>
-
-                    </p>
-                </div>
-                </div>
-            </div>
-        
-            </div>
-        </div>
-        <!-- /.container -->
         
         <a name = "team"></a>
 
-        <div class="content-section-a">
+        <div class="content-section-b">
 
 
 
