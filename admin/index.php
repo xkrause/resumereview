@@ -75,11 +75,11 @@ Admin page for reviewmyresume
         <table id="myTable" class="display" cellspacing="0" width="100%">
                 <thead>
                     <tr>
+						<th>ID</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Phone</th>
                         <th>Submit Date</th>
-                        <th>Status</th>
 						<th>Action</th>
                     </tr>
                 </thead>
@@ -87,29 +87,37 @@ Admin page for reviewmyresume
                 <tbody>
                     <?php
                         foreach ($result as $row) {
+							$id = $row['id'];
                             $name = $row['name'];
                             $email = $row['email'];
                             $phone = $row['phone'];
                             $time = $row['time'];
                             $status = $row['status'];
+				  
                             echo "
+								<td>$id</td>
                                 <td>$name</td>
                                 <td>$email</td>
                                 <td>$phone</td>
-                                <td>$time</td> 
-                                <td>$status</td>
-								<td><input name =  \"update\" type=\"button\" value=\"Update status\"/></td>
+                                <td>$time</td>
+								<td><input name = \"delete\" class=\"btn btn-danger\" type=\"submit\" action =\"index.php\" method = \"post\" value=\"Delete file\"/></td>
                                  ";
                              echo "</tr>";
                         }
                 ?>
             </tbody>
         </table>
+				
+		<div class="btn-group" role="group" aria-label="H">
+		<button type="button" class="btn btn-success" onclick="location.href = '/uploads/';">Resume folder</button>
+		<button type="button" class="btn btn-warning" onclick="location.href = '../';">Log out</button>
+	  </div>
     </div>
 </body>
 
-<?php
-if(isset($_POST['update'])){
-	$sql="UPDATE resumes SET status = 'Reviewed' WHERE id = '$result'";
-}
-?>
+		<?php
+		if(isset($_POST['delete']) && $_POST['delete']=='true') {
+			echo "Hello";
+			//unlink("../Images/".$_POST['fileToDelete']);
+		}
+		?>

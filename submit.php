@@ -8,12 +8,7 @@
     
     //Set the local timezone
     date_default_timezone_set("America/Los_Angeles");
-     
-     $name = $_POST['uploaderName'];
-     $phone = $_POST['uploaderPhone'];
-     $email = $_POST['uploaderEmail'];
-     $time = date("jS \of F Y h:i:s A");
-     
+
     $target_dir = "uploads/";
     $file = basename($_FILES["fileToUpload"]["name"]);
     $ext = pathinfo ($file, PATHINFO_EXTENSION);
@@ -64,12 +59,20 @@
           echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded. You will be redirected to Shopify for payment..";
           
           //Save to the database
+               $uploaderName = $_POST['uploaderName'];
+               $uploaderPhone = $_POST['uploaderPhone'];
+               $uploaderEmail = $_POST['uploaderEmail'];
+               $uploaderTime = date("jS \of F Y h:i:s A");
+               $uploaderFile = $file_name;
+               
           //require 'reviewDB.php';
           $conn= mysqli_connect('localhost','review','GL2RIdtQNTih', 'review_DB');
-          $sql = "INSERT INTO resumes (name, email, phone, time)
-          VALUES ('$name', '$email', '$phone', '$time')";
+          $sql = "INSERT INTO resumes (name, email, phone, time, filename)
+          VALUES ('$uploaderName', '$uploaderEmail', '$uploaderPhone', '$uploaderTime', '$uploaderFile')";
           $result = @mysqli_query($cnxn, $sql);
           
+
+     
           if ($conn->connect_error) {
                die("Connection failed: " . $conn->connect_error);
            }
