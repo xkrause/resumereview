@@ -55,11 +55,11 @@
                 $email->FromName  = 'ReviewMyResume';
                 $email->Subject   = 'Your attached file';
                 $email->Body      = 'This is the resume';
-                $email->AddAddress( 'sk8rak@gmail.com' );
+                $email->AddAddress( 'Motake@mail.greenriver.edu' );
 
                 $email->Subject   = 'Your resume from ' . $_POST['uploaderName'] . " " . date("l jS \of F Y h:i:s A");
                 $email->Body      = 'You have a new Resume!';
-                $email->AddAddress( 'chau.duong1995@yahoo.com' );
+                //$email->AddAddress( 'chau.duong1995@yahoo.com' );
                 
                 $email->AddAttachment( $target_file , $file_name );
                 
