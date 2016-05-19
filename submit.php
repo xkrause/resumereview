@@ -1,7 +1,10 @@
 <?php
+	//Error reporting 
+	ini_set('display_errors', 1);
+	error_reporting(0);
+
     //This is for PHPMailer
     require 'PHPMailer/PHPMailerAutoload.php';
-    require 'reviewDB.php';
     
     //Set the local timezone
     date_default_timezone_set("America/Los_Angeles");
@@ -9,7 +12,7 @@
      $name = $_POST['uploaderName'];
      $phone = $_POST['uploaderPhone'];
      $email = $_POST['uploaderEmail'];
-     $date = date("jS \of F Y h:i:s A");
+     $time = date("jS \of F Y h:i:s A");
      
     $target_dir = "uploads/";
     $file = basename($_FILES["fileToUpload"]["name"]);
@@ -51,15 +54,31 @@
         
     // if everything is ok, try to upload file
     } else {
-     //Save to the database
-     $conn = new mysqli($hostname, $username, $password, $dbname);
-     $sql = "INSERT INTO resumes (name, email, phone, date)
-     VALUES ($name, $phone, $email, $date)";
-     
+          //Captcha
+           session_start();
+          if($_POST['captcha'] != $_SESSION['digit']) die("Sorry, the CAPTCHA code entered was incorrect!");
+           session_destroy();
+    
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-            header("Location: https://review-my-resume.myshopify.com");
-            echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-            
+          header( "Refresh:3; url=https://review-my-resume.myshopify.com", true, 303);
+          echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded. You will be redirected to Shopify for payment..";
+          
+          //Save to the database
+          //require 'reviewDB.php';
+          $conn= mysqli_connect('localhost','review','GL2RIdtQNTih', 'review_DB');
+          $sql = "INSERT INTO resumes (name, email, phone, time)
+          VALUES ('$name', '$email', '$phone', '$time')";
+          $result = @mysqli_query($cnxn, $sql);
+          
+          if ($conn->connect_error) {
+               die("Connection failed: " . $conn->connect_error);
+           }
+
+          if ($conn->query($sql) === TRUE) {
+               echo ".";
+           } else {
+               echo "Error: " . $sql . "<br>" . $conn->error;
+           }
                //Sending email
                 $email = new PHPMailer();
                 $email->From      = 'reviewmyresume@hotmail.com';

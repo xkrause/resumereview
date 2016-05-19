@@ -8,7 +8,7 @@ Establish connection to reviewmyresume databse
     $dsn = "mysql:host=localhost; dbname=review_DB; charset=utf8";
     $username = "review";
     $password = "GL2RIdtQNTih";
-    $hostname = "http://reviewmyresume.greenrivertech.net/";
+    $hostname = "reviewmyresume.greenrivertech.net";
     $dbname = "review_DB";
  
     // Using PDO

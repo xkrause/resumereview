@@ -30,7 +30,7 @@ Admin page for reviewmyresume
     <![endif]-->
     
 	 <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     
 	<!--For the table-->
     <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -61,7 +61,7 @@ Admin page for reviewmyresume
         
         <?php
             //Connect to the Database
-            require 'reviewDB.php';
+            require '../reviewDB.php';
             
             $sql = "SELECT * FROM resumes";
             /*
@@ -80,6 +80,7 @@ Admin page for reviewmyresume
                         <th>Phone</th>
                         <th>Submit Date</th>
                         <th>Status</th>
+						<th>Action</th>
                     </tr>
                 </thead>
                 
@@ -90,13 +91,14 @@ Admin page for reviewmyresume
                             $email = $row['email'];
                             $phone = $row['phone'];
                             $time = $row['time'];
-                            $file = $row['file'];
+                            $status = $row['status'];
                             echo "
                                 <td>$name</td>
                                 <td>$email</td>
                                 <td>$phone</td>
                                 <td>$time</td> 
                                 <td>$status</td>
+								<td><input name =  \"update\" type=\"button\" value=\"Update status\"/></td>
                                  ";
                              echo "</tr>";
                         }
@@ -105,3 +107,9 @@ Admin page for reviewmyresume
         </table>
     </div>
 </body>
+
+<?php
+if(isset($_POST['update'])){
+	$sql="UPDATE resumes SET status = 'Reviewed' WHERE id = '$result'";
+}
+?>

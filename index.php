@@ -161,7 +161,11 @@
                                 <div class="form-group">
                                     <p class="lead">Please upload your Resume as a PDF, RTF, Text or Word Document:</p>
                                     <input type="file" name="fileToUpload" id="fileToUpload">
-                                </div>
+                                </div>
+                                
+                                <p><img src="/captcha.php" width="120" height="30" border="1" alt="CAPTCHA"> <input type="text" size="6" maxlength="5" name="captcha" value=""></p>
+                                
+                                 <p><small>copy the digits from the image into this box</small></p>
                             </div>
                        
                             <div class="clearfix"></div>
