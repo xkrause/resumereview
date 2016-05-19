@@ -1,10 +1,16 @@
 <?php
     //This is for PHPMailer
     require 'PHPMailer/PHPMailerAutoload.php';
+    require 'reviewDB.php';
     
     //Set the local timezone
     date_default_timezone_set("America/Los_Angeles");
-
+     
+     $name = $_POST['uploaderName'];
+     $phone = $_POST['uploaderPhone'];
+     $email = $_POST['uploaderEmail'];
+     $date = date("jS \of F Y h:i:s A");
+     
     $target_dir = "uploads/";
     $file = basename($_FILES["fileToUpload"]["name"]);
     $ext = pathinfo ($file, PATHINFO_EXTENSION);
@@ -24,18 +30,18 @@
     }
     
     //Change the file name
-    $file_name = basename($_FILES["fileToUpload"]["name"]). " " . $_POST['uploaderName'] . " " . date("l jS \of F Y h:i:s A") . "." . $ext;
+    $file_name = basename($_FILES["fileToUpload"]["name"]). " " . $_POST['uploaderName'] . " " . date("jS \of F Y h:i:s A") . "." . $ext;
     $target_file = $target_dir . $file_name;
     
     // Check if file already exists. Almost would never happen
     if (file_exists($target_file)) {
-        echo "Sorry, file already exists. ";
+        echo "File already exists. ";
         $uploadOk = 0;
     }
     
     // Check file size
     if ($_FILES["fileToUpload"]["size"] > 500000) {
-        echo "Sorry, your file is too large. ";
+        echo "Your file is too large. ";
         $uploadOk = 0;
     }
     
@@ -45,6 +51,11 @@
         
     // if everything is ok, try to upload file
     } else {
+     //Save to the database
+     $conn = new mysqli($hostname, $username, $password, $dbname);
+     $sql = "INSERT INTO resumes (name, email, phone, date)
+     VALUES ($name, $phone, $email, $date)";
+     
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             header("Location: https://review-my-resume.myshopify.com");
             echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
@@ -53,20 +64,16 @@
                 $email = new PHPMailer();
                 $email->From      = 'reviewmyresume@hotmail.com';
                 $email->FromName  = 'ReviewMyResume';
-                $email->Subject   = 'Your attached file';
-                $email->Body      = 'This is the resume';
-                $email->AddAddress( 'sk8rak@gmail.com' );
-
-                $email->Subject   = 'Your resume from ' . $_POST['uploaderName'] . " " . date("l jS \of F Y h:i:s A");
+                $email->Subject   = 'Your resume from ' . $_POST['uploaderName'] . " " . date("jS \of F Y h:i:s A");
                 $email->Body      = 'You have a new Resume!';
-                $email->AddAddress( 'chau.duong1995@yahoo.com' );
-                
+                $email->AddAddress( 'sk8rak@gmail.com' );
+                //$email->AddAddress( 'chau.duong1995@yahoo.com' );
                 $email->AddAttachment( $target_file , $file_name );
                 
                 return $email->Send();
 
         } else {
-            echo "Sorry, there was an error uploading your file.";
+            echo "There was an error uploading your file.";
         }
     }
 ?>
