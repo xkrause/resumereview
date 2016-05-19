@@ -93,7 +93,8 @@ Admin page for reviewmyresume
                             $phone = $row['phone'];
                             $time = $row['time'];
                             $status = $row['status'];
-				  
+							$filename = $row['filename'];
+							
                             echo "
 								<td>$id</td>
                                 <td>$name</td>
@@ -116,8 +117,8 @@ Admin page for reviewmyresume
 </body>
 
 		<?php
-		if(isset($_POST['delete']) && $_POST['delete']=='true') {
+		if(isset($_POST['delete'])) {
 			echo "Hello";
-			//unlink("../Images/".$_POST['fileToDelete']);
+			//unlink("/uploads/".$_POST['filename']);
 		}
 		?>
