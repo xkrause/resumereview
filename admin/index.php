@@ -101,7 +101,7 @@ Admin page for reviewmyresume
                                 <td>$email</td>
                                 <td>$phone</td>
                                 <td>$time</td>
-								<td><input name = \"delete\" class=\"btn btn-danger\" type=\"submit\" action =\"index.php\" method = \"post\" value=\"Delete file\"/></td>
+								<td><input name = \"delete\" class=\"btn btn-danger\" type=\"submit\" action =\"delete.php\" method = \"post\" value=\"Delete file\"/></td>
                                  ";
                              echo "</tr>";
                         }
@@ -116,9 +116,4 @@ Admin page for reviewmyresume
     </div>
 </body>
 
-		<?php
-		if(isset($_POST['delete'])) {
-			echo "Hello";
-			//unlink("/uploads/".$_POST['filename']);
-		}
-		?>
+

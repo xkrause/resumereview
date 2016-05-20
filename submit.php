@@ -86,7 +86,7 @@
                 $email = new PHPMailer();
                 $email->From      = 'reviewmyresume@hotmail.com';
                 $email->FromName  = 'ReviewMyResume';
-<<<<<<< HEAD
+
                 $email->Subject   = 'Your attached file';
                 $email->Body      = 'This is the resume';
                 $email->AddAddress( 'Motake@mail.greenriver.edu' );
@@ -95,12 +95,11 @@
                 $email->Body      = 'You have a new Resume!';
                 //$email->AddAddress( 'chau.duong1995@yahoo.com' );
                 
-=======
+
                 $email->Subject   = 'Your resume from ' . $_POST['uploaderName'] . " " . date("jS \of F Y h:i:s A");
                 $email->Body      = 'You have a new Resume!';
                 $email->AddAddress( 'sk8rak@gmail.com' );
                 //$email->AddAddress( 'chau.duong1995@yahoo.com' );
->>>>>>> 4680b976a938d48e5a79869147f31c66f335cf06
                 $email->AddAttachment( $target_file , $file_name );
                 
                 return $email->Send();
