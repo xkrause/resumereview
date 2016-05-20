@@ -104,7 +104,7 @@ Admin page for reviewmyresume
                                 <td>$email</td>
                                 <td>$phone</td>
                                 <td>$time</td>
-								<td><form><input name = \"delete\" class=\"btn btn-danger\" type=\"submit\" action =\"index.php\" method = \"post\" value=\"Delete file\"/></input></form></td>
+								<td><form method = \"post\" action =\"?\"><input name = \"delete\" class=\"btn btn-danger\" type=\"submit\" value=\"Delete file\"/></input></form></td>
                                  ";
                              echo "</tr>";
                         }
@@ -114,16 +114,37 @@ Admin page for reviewmyresume
 				
 		<div class="btn-group" role="group" aria-label="Help bar">
 		<button type="button" class="btn btn-success" onclick="location.href = '/uploads/';">Resume folder</button>
-		<button type="button" class="btn btn-warning" onclick="location.href = '../';">Log out</button>
-	  </div>
+		<button type="button" class="btn btn-warning" onclick="location.href = '../';">Log out</button> 
+	  </div> <br>
+		
+	<?php
+		if(isset($_POST['delete'])) {
+			$conn= mysqli_connect('localhost','review','GL2RIdtQNTih', 'review_DB');
+			$deletedFile = "../uploads/$filename";
+			unlink($deletedFile);
+			//echo "<script type='text/javascript'>alert('$deletedFile');</script>";
+			/*
+			if (unlink($deletedFile)) {
+				echo "File Removed from server";
+			}*/
+			
+			$delete = "DELETE FROM resumes WHERE id = '$id'";
+			$result = @mysqli_query($cnxn, $delete);
+			
+			if ($conn->connect_error) {
+               die("Connection failed: " . $conn->connect_error);
+            }
+				
+          if ($conn->query($delete) === TRUE) {
+               //echo "Delete Success! Please refresh the page!";
+			   header("Refresh:0");
+           } else {
+               echo "Error: " . $sql . "<br>" . $conn->error;
+           }
+		}	
+	?>
     </div>
 </body>
 
-	<?php
-		if(!isset($_POST['delete'])) {
-			$deletedFile = "\"http://reviewmyresume.greenrivertech.net/uploads/$filename";
-			//echo "<script type='text/javascript'>alert('$deletedFile');</script>";
-			unlink($deletedFile);
-		}
-	?>
+
 

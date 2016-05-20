@@ -71,8 +71,6 @@
           VALUES ('$uploaderName', '$uploaderEmail', '$uploaderPhone', '$uploaderTime', '$uploaderFile')";
           $result = @mysqli_query($cnxn, $sql);
           
-
-     
           if ($conn->connect_error) {
                die("Connection failed: " . $conn->connect_error);
            }
