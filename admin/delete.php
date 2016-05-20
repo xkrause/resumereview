@@ -49,9 +49,11 @@ Delete page for reviewmyresume
     </div>
 </body>
 
-		<?php
-		if(isset($_POST['delete'])) {
-			echo "Hello";
+	<?php
+		if(!isset($_POST['delete'])) {
+			$message = "wrong answer";
+			echo "<script type='text/javascript'>alert('$message');</script>";
+			//echo "Hello";
 			//unlink("/uploads/".$_POST['filename']);
 		}
-		?>
+	?>

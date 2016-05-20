@@ -9,6 +9,9 @@ Admin page for reviewmyresume
 	ini_set('display_errors', 1);
 	error_reporting(0);
 ?>
+
+
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -101,7 +104,7 @@ Admin page for reviewmyresume
                                 <td>$email</td>
                                 <td>$phone</td>
                                 <td>$time</td>
-								<td><input name = \"delete\" class=\"btn btn-danger\" type=\"submit\" action =\"delete.php\" method = \"post\" value=\"Delete file\"/></td>
+								<td><form><input name = \"delete\" class=\"btn btn-danger\" type=\"submit\" action =\"index.php\" method = \"post\" value=\"Delete file\"/></input></form></td>
                                  ";
                              echo "</tr>";
                         }
@@ -109,11 +112,18 @@ Admin page for reviewmyresume
             </tbody>
         </table>
 				
-		<div class="btn-group" role="group" aria-label="H">
+		<div class="btn-group" role="group" aria-label="Help bar">
 		<button type="button" class="btn btn-success" onclick="location.href = '/uploads/';">Resume folder</button>
 		<button type="button" class="btn btn-warning" onclick="location.href = '../';">Log out</button>
 	  </div>
     </div>
 </body>
 
+	<?php
+		if(!isset($_POST['delete'])) {
+			$deletedFile = "\"http://reviewmyresume.greenrivertech.net/uploads/$filename";
+			//echo "<script type='text/javascript'>alert('$deletedFile');</script>";
+			unlink($deletedFile);
+		}
+	?>
 
