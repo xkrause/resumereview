@@ -10,8 +10,6 @@ Admin page for reviewmyresume
 	error_reporting(0);
 ?>
 
-
-	
 <!DOCTYPE html>
 <html>
 <head>
@@ -123,10 +121,10 @@ Admin page for reviewmyresume
 			$deletedFile = "../uploads/$filename";
 			unlink($deletedFile);
 			//echo "<script type='text/javascript'>alert('$deletedFile');</script>";
-			/*
+			
 			if (unlink($deletedFile)) {
 				echo "File Removed from server";
-			}*/
+			}
 			
 			$delete = "DELETE FROM resumes WHERE id = '$id'";
 			$result = @mysqli_query($cnxn, $delete);
