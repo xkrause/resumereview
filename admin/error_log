@@ -1,0 +1,8 @@
+[19-May-2016 16:00:05 America/Chicago] PHP Parse error:  syntax error, unexpected 'update' (T_STRING), expecting ',' or ';' in /home/review/public_html/admin/index.php on line 101
+[19-May-2016 16:44:18 America/Chicago] PHP Parse error:  syntax error, unexpected 'utf' (T_STRING), expecting ',' or ';' in /home/review/public_html/admin/index.php on line 118
+[19-May-2016 16:54:16 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/review/public_html/admin/index.php on line 122
+[19-May-2016 16:54:17 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/review/public_html/admin/index.php on line 122
+[19-May-2016 16:55:48 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/review/public_html/admin/index.php on line 123
+[19-May-2016 16:55:49 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/review/public_html/admin/index.php on line 123
+[19-May-2016 19:42:21 America/Chicago] PHP Parse error:  syntax error, unexpected '$filename' (T_VARIABLE) in /home/review/public_html/admin/index.php on line 126
+[19-May-2016 21:38:57 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/review/public_html/admin/index.php on line 147

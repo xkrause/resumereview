@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "upload"
+AuthUserFile "/home/review/.htpasswds/public_html/uploads/passwd"
+require valid-user
