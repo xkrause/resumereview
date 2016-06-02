@@ -8,6 +8,9 @@ Admin page for reviewmyresume
 	//Error reporting 
 	ini_set('display_errors', 1);
 	error_reporting(0);
+	
+	//unset($_POST['delete']);
+	//unset($_POST['statusChange']);
 ?>
 
 <!DOCTYPE html>
@@ -81,7 +84,9 @@ Admin page for reviewmyresume
                         <th>Email</th>
                         <th>Phone</th>
                         <th>Submit Date</th>
-						<th>Action</th>
+						<th>Current status</th>
+						<th align="center">Change status</th>
+						<th align="center">Delete</th>
                     </tr>
                 </thead>
                 
@@ -102,7 +107,9 @@ Admin page for reviewmyresume
                                 <td>$email</td>
                                 <td>$phone</td>
                                 <td>$time</td>
-								<td><form method = \"post\" action =\"?\"><input name = \"delete\" class=\"btn btn-danger\" type=\"submit\" value=\"Delete file\"/></input></form></td>
+								<td align=\"center\">$status</td>
+								<td align=\"center\"><form method = \"post\" action =\"?\"><input name = \"statusChange\" class=\"btn btn-success\" type=\"submit\" value=\"Update\"/></input></form></td>
+								<td align=\"center\"><form method = \"post\" action =\"?\"><input name = \"delete\" class=\"btn btn-danger\" type=\"submit\" value=\"Delete file\"/></input></form></td>							
                                  ";
                              echo "</tr>";
                         }
@@ -116,7 +123,37 @@ Admin page for reviewmyresume
 	  </div> <br>
 		
 	<?php
-		if(isset($_POST['delete'])) {
+		//Change status
+		if(isset($_POST['statusChange']) && $_POST['statusChange'] == "Update") {
+			//require '../reviewDB.php';
+			$conn= mysqli_connect('localhost','review','GL2RIdtQNTih', 'review_DB');
+			$update = "UPDATE resumes SET status = 'Reviewed' WHERE id = '$id'";
+			$resultUpdate = @mysqli_query($conn, $update);
+			
+			if ($status == "Reviewed") {
+				$update = "UPDATE resumes SET status = 'Not Reviewed' WHERE id = '$id'";
+				$resultUpdate = @mysqli_query($conn, $update);
+				unset($_POST['statusChange']);
+				header("Refresh:0");
+			}
+			//echo "<script type='text/javascript'>alert('$id');</script>";
+			
+			/*
+			if ($conn->query($resultUpdate) === TRUE) {
+               //echo "Update Success! Please refresh the page!";
+			   header("Refresh:0");
+           } else {
+               echo "Error: " . $sql . "<br>" . $conn->error;
+           }
+           */
+		   
+		   //Unset to prvent script runnning at the start or on page refresh
+			unset($_POST['statusChange']);
+			header("Refresh:0");
+		}
+		
+		//Delete the resume
+		if(isset($_POST['delete']) && $_POST['delete'] == "Delete file") {
 			$conn= mysqli_connect('localhost','review','GL2RIdtQNTih', 'review_DB');
 			$deletedFile = "../uploads/$filename";
 			unlink($deletedFile);
@@ -127,18 +164,24 @@ Admin page for reviewmyresume
 			}
 			
 			$delete = "DELETE FROM resumes WHERE id = '$id'";
-			$result = @mysqli_query($cnxn, $delete);
+			$result = @mysqli_query($conn, $delete);
 			
 			if ($conn->connect_error) {
                die("Connection failed: " . $conn->connect_error);
             }
-				
+			
+		/*
           if ($conn->query($delete) === TRUE) {
                //echo "Delete Success! Please refresh the page!";
 			   header("Refresh:0");
            } else {
                echo "Error: " . $sql . "<br>" . $conn->error;
            }
+           */
+		   
+		   //Unset to prvent script runnning at the start or on page refresh
+		   unset($_POST['delete']);
+		   header("Refresh:0");
 		}	
 	?>
     </div>
