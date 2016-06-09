@@ -186,6 +186,3 @@ Admin page for reviewmyresume
 	?>
     </div>
 </body>
-
-
-
