@@ -1,3 +1,8 @@
+<!--
+  Filename: captcha.php
+  Purpose: Set up a captcha as an added layer of security when submitting a resume
+-->
+
 <?PHP
   // Adapted for The Art of Web: www.the-art-of-web.com
   // Please acknowledge use of this code by including this header.

@@ -1,3 +1,9 @@
+<!--
+        Outdated file
+        Filename: shopify.php
+        Purpose: To add a new item to shopify
+-->
+
 <?php
     //Create the API URL using the private app credentials
     $baseUrl = '';

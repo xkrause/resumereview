@@ -1,3 +1,8 @@
+<!--
+   Filename: email.php
+   Purpose: To send an email from the web page
+-->
+
 <?php
    //Sending email
 

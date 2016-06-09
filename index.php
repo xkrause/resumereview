@@ -1,3 +1,8 @@
+<!--
+    Filename: index.php
+    Purpose: The index page
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 

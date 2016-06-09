@@ -1,3 +1,8 @@
+<!--
+	 Filename: submit.php
+	 Purpose: To manage the file upload on the index page
+-->
+
 <?php
 	//Error reporting 
 	ini_set('display_errors', 1);
